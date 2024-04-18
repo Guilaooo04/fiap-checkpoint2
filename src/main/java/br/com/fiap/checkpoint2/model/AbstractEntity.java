@@ -11,7 +11,7 @@ import java.io.Serializable;
 public abstract class AbstractEntity<ID> implements Serializable {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private ID id;
 
     public ID getId() {
@@ -21,6 +21,5 @@ public abstract class AbstractEntity<ID> implements Serializable {
     public void setId(ID id) {
         this.id = id;
     }
-
 
 }
